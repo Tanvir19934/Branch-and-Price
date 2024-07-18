@@ -20,7 +20,7 @@ class Node:
     def __lt__(self, other):
         return self.obj_val > other.obj_val  # For heap implementation. The heapq.heapify() will heapify the list based on this criteria.
         
-def branching(model):
+def branching(model) -> None:
 
     # Create the root node by solving the initial rmp
     root_node = Node(model, 0, "root_node")
