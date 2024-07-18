@@ -23,6 +23,11 @@ Where x_j is the number of boards cut according to pattern j.
 a_(i,j) indicates how many boards of width w_i are produced by that pattern.
 b_i is the number of boards of width w_i are needed by the customer.
 
+## How to run
+
+Execute `branch_and_price.py`. 
+The problem definition can be changed in the `input_problem.py` file.
+
 ## Requirements
 
 - `gurobipy 9.1.0` or higher to solve the LP relaxations
