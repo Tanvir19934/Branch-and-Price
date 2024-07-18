@@ -106,8 +106,7 @@ def retrieve_patterns(model) -> Dict:
         coeffs = {}
         for var in model.getVars():
             coeff = model.getCoeff(constr, var)
-            if 1:  # Only include non-zero coefficients
-                coeffs[var.VarName] = coeff
+            coeffs[var.VarName] = coeff
         constraint_coeffs[constr.ConstrName] = coeffs
     return constraint_coeffs
 
