@@ -12,7 +12,7 @@ class SubProblem:
         self.dual_vars = dual_vars
         self.subproblem_model = subproblem_model
 
-    def build_and_optimize_model(self, verbose=True):
+    def build_and_optimize_model(self, verbose=True) -> None:
         # Build the subproblem according to the dual variables. The subproblem is
         # itself an integer program, but it is easy to solve. It can be solved
         # by dynamic programming as well (pseudo-poly runtime)
