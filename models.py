@@ -39,7 +39,7 @@ class MasterProblem:
     def __init__(self, model):
         self.model = model
 
-    def relaxedLP(self, verbose=True):
+    def relaxedLP(self, verbose=True) -> None:
         if verbose==True:
             self.model.setParam('OutputFlag', 0)
         else: self.model.setParam('OutputFlag', 1)
@@ -60,7 +60,7 @@ class MasterProblem:
         obj = self.model.getObjective()
         return obj.getValue()
     
-    def addColumn(self, new_column):
+    def addColumn(self, new_column) -> None:
         new_column = gp.Column(new_column, self.model.getConstrs())
         self.model.addVar(vtype=GRB.INTEGER, lb = 0, ub = GRB.INFINITY, column=new_column, obj=1) #add the coefficients in the constraint set and the objective function
         self.model.update()
